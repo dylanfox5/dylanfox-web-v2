@@ -1,64 +1,11 @@
 :root {
     --space-blue: rgba(22, 30, 84);
+    --blue: rgba(17, 70, 143);
     --red: rgba(255, 81, 81);
-}
-
-/* bg colors */
-.space-blue {
-    background-color: rgba(22, 30, 84);
-}
-
-.blue {
-    background-color: rgba(17, 70, 143);
-}
-
-.red {
-    background-color: rgba(255, 81, 81);
-}
-
-.orange {
-    background-color: rgba(255, 155, 106);
-}
-
-.light-grey {
-    background-color: rgba(238, 238, 238);
-}
-
-/* text colors */
-.space-blue-txt {
-    color: rgba(22, 30, 84);
-}
-
-.blue-txt {
-    color: rgba(17, 70, 143);
-}
-
-.red-txt {
-    color: rgba(255, 81, 81);
-}
-
-.orange-txt {
-    color: rgba(255, 155, 106);
-}
-
-.light-grey-txt {
-    color: rgba(238, 238, 238);
+    --orange: rgba(255, 155, 106);
+    --white: rgba(238, 238, 238);
 }
 
 body {
     font-family: 'Exo', sans-serif;
 }
-
-.landing-page {
-    background: linear-gradient(90deg, var(--space-blue) 70%, var(--red) 30%);
-    height: 100vh;
-}
-
-.headshot {
-    width: 350px;
-    height: auto;
-}
-
-.img-responsive {
-    display: inline-block;
-  }
