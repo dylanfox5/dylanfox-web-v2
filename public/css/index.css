@@ -24,6 +24,16 @@ nav {
     color: var(--white);
 }
 
+.home-btn {
+    color: var(--white);
+    width: 33%;
+    border: 3px solid var(--red);
+}
+
+.home-btn:hover {
+    background-color: var(--red) ;
+}
+
 .home-hs {
     width: 300px;
     height: auto;
