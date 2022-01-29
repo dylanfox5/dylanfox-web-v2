@@ -105,3 +105,13 @@ nav {
     top: -15px;
     right: -15px;
 }
+
+.footer {
+    height: 5vh;
+    text-align: center;
+}
+
+.footer-text {
+    color: var(--white);
+    font-weight: 500;
+}
