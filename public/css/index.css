@@ -30,3 +30,12 @@ nav {
     margin: auto;    
     display: block;
 }
+
+.navbar {
+    transition: top 0.25s ease;
+    backdrop-filter: blur(5px);
+}
+
+.nav-up {
+    top: -60px;
+}
