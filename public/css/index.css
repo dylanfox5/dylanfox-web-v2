@@ -8,4 +8,25 @@
 
 body {
     font-family: 'Exo', sans-serif;
+    background-color: var(--space-blue);
+}
+
+nav {
+    color: var(--white);
+}
+
+.home-heading {
+    color: var(--red);
+    margin-bottom: 0;
+}
+
+.home-subheading {
+    color: var(--white);
+}
+
+.home-hs {
+    width: 300px;
+    height: auto;
+    margin: auto;    
+    display: block;
 }
