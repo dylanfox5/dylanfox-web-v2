@@ -43,16 +43,6 @@ nav {
     background-color: var(--red) ;
 }
 
-.home-hs {
-    width: 300px;
-    height: auto;
-    margin: auto;    
-    display: block;
-    border-left-style: 5px solid var(--blue) inset;
-    /* outline: 5px solid var(--blue);
-    outline-offset: 15px; */
-}
-
 .navbar {
     transition: top 0.25s ease;
     backdrop-filter: blur(5px);
@@ -60,4 +50,58 @@ nav {
 
 .nav-up {
     top: -60px;
+}
+
+.content-divider {
+    background-color: var(--blue);
+    height: 1vh;
+}
+
+.about-text {
+    color: var(--white);
+    font-size: 115%;
+    font-weight: 500;
+}
+
+.about-text-highlight {
+    color: var(--red);
+}
+
+.about-text-list {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 105%;
+    columns: 2;
+}
+
+.about-text-list li::marker {
+    color: var(--red);
+}
+
+.about-hs {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 50%;
+    background-image: linear-gradient(0deg, rgba(17, 70, 143, 0.5),  rgba(17, 70, 143, 0.5)), url('../img/hs.png');
+}
+
+.about-hs:hover {
+    background-image: url('../img/hs.png');
+}
+
+.about-hs-border {
+    width: auto;
+    height: 100%;
+    position: relative;
+    border: 5px solid var(--blue);
+    top: -35px;
+    right: -35px;
+    z-index: -2;
+    transition: .1s linear;
+}
+
+.about-hs:hover > .about-hs-border {
+    top: -15px;
+    right: -15px;
 }
