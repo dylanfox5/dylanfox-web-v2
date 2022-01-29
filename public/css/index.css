@@ -13,19 +13,28 @@ body {
 
 nav {
     color: var(--white);
+    font-weight: 500;
+}
+
+.navbar-brand {
+    font-weight: 700;
 }
 
 .home-heading {
     color: var(--red);
     margin-bottom: 0;
+    font-weight: 500;
 }
 
 .home-subheading {
     color: var(--white);
+    font-weight: 700;
 }
 
 .home-btn {
     color: var(--white);
+    font-weight: 500 !important;
+    font-size: 125%;
     width: 33%;
     border: 3px solid var(--red);
 }
@@ -39,6 +48,9 @@ nav {
     height: auto;
     margin: auto;    
     display: block;
+    border-left-style: 5px solid var(--blue) inset;
+    /* outline: 5px solid var(--blue);
+    outline-offset: 15px; */
 }
 
 .navbar {
