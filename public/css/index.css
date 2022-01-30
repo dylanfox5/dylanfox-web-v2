@@ -20,6 +20,10 @@ nav {
     font-weight: 700;
 }
 
+#home {
+    height: 100vh;
+}
+
 .home-heading {
     color: var(--red);
     margin-bottom: 0;
@@ -52,9 +56,18 @@ nav {
     top: -60px;
 }
 
-.content-divider {
+#content-divider {
     background-color: var(--blue);
     height: 1vh;
+}
+
+#about {
+    height: 100vh;
+}
+
+.about-heading {
+    color: var(--red);
+    font-weight: 500;
 }
 
 .about-text {
@@ -106,12 +119,22 @@ nav {
     right: -15px;
 }
 
-.footer {
-    height: 5vh;
-    text-align: center;
+#experience {
+    height: 100vh;
 }
 
-.footer-text {
+.experience-heading {
+    color: var(--red);
+    font-weight: 500;
+}
+
+#footer {
+    height: 5vh;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+#footer div p {
     color: var(--white);
     font-weight: 500;
 }

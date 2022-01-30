@@ -18,7 +18,7 @@
 
 <body>
     <div class="container">
-        <div class="row vh-100">
+        <div id="home" class="row">
             <nav class="autohide navbar navbar-expand-lg navbar-dark shadow fixed-top">
                 <a class="navbar-brand" href="#">dfox</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -29,7 +29,7 @@
                     <div class="navbar-nav">
                         <a class="nav-item nav-link active" href="#home">home <span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link" href="#about">about</a>
-                        <a class="nav-item nav-link" href="#work">work</a>
+                        <a class="nav-item nav-link" href="#experience">experience</a>
                         <a class="nav-item nav-link" href="#projects">projects</a>
                         <a class="nav-item nav-link" href="#contact">contact</a>
                     </div>
@@ -48,10 +48,12 @@
                 </div>
             </div>
         </div>
-        <div class="row content-divider"></div>
-        <div id="about" class="row vh-100">
+
+        <div id="content-divider" class="row"></div>
+
+        <div id="about" class="row">
             <div class="col-sm-12 col-lg-7 d-flex flex-column justify-content-center">
-                <p class="h1 home-heading mb-3">about-me</p>
+                <p class="h1 about-heading mb-3">about-me</p>
                 <p class="about-text">
                     Hey there! My name is <span class="about-text-highlight">Dylan</span>; I have a passion for solving problems. I was first introduced to the development world
                     in 2015 when I took my first programming course and learned Python. From then on, I floated between several programming languages and 
@@ -79,9 +81,17 @@
                 </div>
             </div>
         </div>
-        <div class="row footer">
+
+        <div id="experience" class="row">
+            <div class="col-sm-12 d-flex flex-column justify-content-center border">
+                <p class="h1 experience-heading">experience</p>
+            </div>
+        </div>
+
+
+        <div id="footer" class="row">
             <div class="col d-flex flex-column justify-content-center">
-                <p class="footer-text">Designed & Built by Dylan Fox // v2 // 2022</p>
+                <p>Designed & Built by Dylan Fox // v2 // 2022</p>
             </div>
         </div>
     </div>
