@@ -148,6 +148,7 @@ nav {
 .experience-card {
     background-color: var(--blue);
     color: var(--white);
+    margin-bottom: 5vh;
 }
 
 .experience-card-title {
@@ -169,7 +170,7 @@ nav {
 }
 
 .card-body:hover > .experience-card-divider {
-    width: 20vw;
+    width: 15vw;
 }
 
 #footer {
