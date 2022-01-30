@@ -11,6 +11,27 @@ body {
     background-color: var(--space-blue);
 }
 
+/* text colors */
+.space-blue-text {
+    color: var(--space-blue);
+}
+
+.blue-text {
+    color: var(--blue);
+}
+
+.red-text {
+    color: var(--red);
+}
+
+.orange-text {
+    color: var(--orange);
+}
+
+.white-text {
+    color: var(--white);
+}
+
 nav {
     color: var(--white);
     font-weight: 500;
@@ -121,11 +142,34 @@ nav {
 
 #experience {
     height: 100vh;
+    font-weight: 500;
 }
 
-.experience-heading {
-    color: var(--red);
+.experience-card {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.experience-card-title {
+    font-weight: 700;
+}
+
+.experience-card-subtitle {
     font-weight: 500;
+    color: var(--red);
+}
+
+.experience-card-divider {
+    width: 10vw;
+    height: .5vh;
+    background-color: var(--space-blue);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: .1s linear;
+}
+
+.card-body:hover > .experience-card-divider {
+    width: 20vw;
 }
 
 #footer {
