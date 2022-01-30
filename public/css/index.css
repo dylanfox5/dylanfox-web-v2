@@ -173,6 +173,26 @@ nav {
     width: 15vw;
 }
 
+#projects {
+    height: 100vh;
+    font-weight: 500;
+}
+
+.projects-card {
+    background-color: var(--blue);
+    color: var(--white);
+    transition: .1s linear;
+}
+
+.projects-card:hover {
+    background-color: var(--space-blue);
+}
+
+.projects-icon {
+    font-size: 2rem;
+    color: var(--red);
+}
+
 #footer {
     height: 5vh;
     text-align: center;
