@@ -193,6 +193,11 @@ nav {
     color: var(--red);
 }
 
+#contact {
+    height: 100vh;
+    font-size: 500;
+}
+
 #footer {
     height: 5vh;
     text-align: center;
