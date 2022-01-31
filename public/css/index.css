@@ -11,6 +11,11 @@ body {
     background-color: var(--space-blue);
 }
 
+#content-divider {
+    background-color: var(--blue);
+    height: 1vh;
+}
+
 /* text colors */
 .space-blue-text {
     color: var(--space-blue);
@@ -31,7 +36,9 @@ body {
 .white-text {
     color: var(--white);
 }
+/* text colors */
 
+/* navbar */
 nav {
     color: var(--white);
     font-weight: 500;
@@ -41,6 +48,17 @@ nav {
     font-weight: 700;
 }
 
+.navbar {
+    transition: top 0.25s ease;
+    backdrop-filter: blur(5px);
+}
+
+.nav-up {
+    top: -60px;
+}
+/* navbar */
+
+/* home */
 #home {
     height: 100vh;
 }
@@ -67,21 +85,9 @@ nav {
 .home-btn:hover {
     background-color: var(--red) ;
 }
+/* home */
 
-.navbar {
-    transition: top 0.25s ease;
-    backdrop-filter: blur(5px);
-}
-
-.nav-up {
-    top: -60px;
-}
-
-#content-divider {
-    background-color: var(--blue);
-    height: 1vh;
-}
-
+/* about */
 #about {
     height: 100vh;
 }
@@ -139,7 +145,9 @@ nav {
     top: -15px;
     right: -15px;
 }
+/* about */
 
+/* experience */
 #experience {
     height: 100vh;
     font-weight: 500;
@@ -172,7 +180,9 @@ nav {
 .card-body:hover > .experience-card-divider {
     width: 15vw;
 }
+/* experience */
 
+/* projects */
 #projects {
     height: 100vh;
     font-weight: 500;
@@ -192,12 +202,16 @@ nav {
     font-size: 2rem;
     color: var(--red);
 }
+/* projects */
 
+/* contact */
 #contact {
     height: 100vh;
     font-size: 500;
 }
+/* contact */
 
+/* footer */
 #footer {
     height: 5vh;
     text-align: center;
@@ -208,3 +222,4 @@ nav {
     color: var(--white);
     font-weight: 500;
 }
+/* footer */
