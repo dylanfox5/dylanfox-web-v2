@@ -13,7 +13,7 @@ body {
 
 #content-divider {
     background-color: var(--blue);
-    height: 1vh;
+    min-height: 1vh;
 }
 
 /* text colors */
@@ -60,7 +60,7 @@ nav {
 
 /* home */
 #home {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .home-heading {
@@ -89,7 +89,7 @@ nav {
 
 /* about */
 #about {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .about-heading {
@@ -149,7 +149,7 @@ nav {
 
 /* experience */
 #experience {
-    height: 100vh;
+    min-height: 100vh;
     font-weight: 500;
 }
 
@@ -184,7 +184,7 @@ nav {
 
 /* projects */
 #projects {
-    height: 100vh;
+    min-height: 100vh;
     font-weight: 500;
 }
 
@@ -206,14 +206,14 @@ nav {
 
 /* contact */
 #contact {
-    height: 100vh;
+    min-height: 100vh;
     font-size: 500;
 }
 /* contact */
 
 /* footer */
 #footer {
-    height: 5vh;
+    min-height: 5vh;
     text-align: center;
     margin-top: 5vh;
 }
