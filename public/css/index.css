@@ -186,6 +186,7 @@ nav {
 #projects {
     min-height: 100vh;
     font-weight: 500;
+    margin-bottom: 5vh;
 }
 
 .projects-card {
