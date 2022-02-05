@@ -73,7 +73,7 @@ nav {
 .home-subheading {
     color: var(--white);
     font-weight: 700;
-    font-size: 500%;
+    font-size: 375%;
 }
 
 .home-btn {
@@ -91,6 +91,7 @@ nav {
 /* about */
 #about {
     min-height: 100vh;
+    margin-bottom: 5vh;
 }
 
 .about-heading {
@@ -151,6 +152,7 @@ nav {
 #experience {
     min-height: 100vh;
     font-weight: 500;
+    margin-bottom: 5vh;
 }
 
 .experience-card {
@@ -191,7 +193,7 @@ nav {
     background-color: var(--blue);
     color: var(--white);
     transition: .1s linear;
-    min-height: 35vh;
+    /* min-height: 35vh; */
 }
 
 .projects-card:hover {
