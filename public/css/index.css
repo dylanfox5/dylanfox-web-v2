@@ -6,16 +6,6 @@
     --white: rgba(238, 238, 238);
 }
 
-body {
-    font-family: 'Exo', sans-serif;
-    background-color: var(--space-blue);
-}
-
-#content-divider {
-    background-color: var(--blue);
-    min-height: 1vh;
-}
-
 /* text colors */
 .space-blue-text {
     color: var(--space-blue);
@@ -36,7 +26,19 @@ body {
 .white-text {
     color: var(--white);
 }
-/* text colors */
+
+body {
+    font-family: 'Exo', sans-serif;
+    background-color: var(--space-blue);
+}
+
+#content-divider {
+    background-color: var(--blue);
+    min-height: 1vh;
+    margin-bottom: 5vh;
+    margin-right: 5vh;
+    margin-left: 5vh;
+}
 
 /* navbar */
 nav {
@@ -56,7 +58,6 @@ nav {
 .nav-up {
     top: -60px;
 }
-/* navbar */
 
 /* home */
 #home {
@@ -72,24 +73,25 @@ nav {
 .home-subheading {
     color: var(--white);
     font-weight: 700;
+    font-size: 375%;
 }
 
 .home-btn {
     color: var(--white);
     font-weight: 500 !important;
     font-size: 125%;
-    width: 33%;
+    width: 50%;
     border: 3px solid var(--red);
 }
 
 .home-btn:hover {
     background-color: var(--red) ;
 }
-/* home */
 
 /* about */
 #about {
     min-height: 100vh;
+    margin-bottom: 5vh;
 }
 
 .about-heading {
@@ -145,12 +147,12 @@ nav {
     top: -15px;
     right: -15px;
 }
-/* about */
 
 /* experience */
 #experience {
     min-height: 100vh;
     font-weight: 500;
+    margin-bottom: 5vh;
 }
 
 .experience-card {
@@ -178,11 +180,9 @@ nav {
 }
 
 .card-body:hover > .experience-card-divider {
-    width: 15vw;
+    width: 30vw;
 }
-/* experience */
 
-/* projects */
 #projects {
     min-height: 100vh;
     font-weight: 500;
@@ -193,7 +193,7 @@ nav {
     background-color: var(--blue);
     color: var(--white);
     transition: .1s linear;
-    min-height: 35vh;
+    /* min-height: 35vh; */
 }
 
 .projects-card:hover {
@@ -204,14 +204,12 @@ nav {
     font-size: 2rem;
     color: var(--red);
 }
-/* projects */
 
 /* contact */
 #contact {
     min-height: 100vh;
     font-size: 500;
 }
-/* contact */
 
 /* footer */
 #footer {
@@ -224,4 +222,31 @@ nav {
     color: var(--white);
     font-weight: 500;
 }
-/* footer */
+
+
+@media (min-width: 768px) {
+    /* home */
+    .home-subheading {
+        color: var(--white);
+        font-weight: 700;
+        /* font-size: 100%; */
+    }
+
+    .home-btn {
+        color: var(--white);
+        font-weight: 500 !important;
+        font-size: 125%;
+        width: 33%;
+        border: 3px solid var(--red);
+    }
+
+    /* experience */
+    .card-body:hover > .experience-card-divider {
+        width: 15vw;
+    }
+
+    /* projects */
+    .projects-card {
+        min-height: 35vh
+    }
+}
