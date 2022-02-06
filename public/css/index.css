@@ -205,6 +205,10 @@ nav {
     color: var(--red);
 }
 
+#project-link:hover {
+    color: var(--white);
+}
+
 /* contact */
 #contact {
     min-height: 100vh;
