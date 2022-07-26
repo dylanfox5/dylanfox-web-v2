@@ -6,10 +6,22 @@ import Footer from "./components/Footer/Footer";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
+import Card from 'react-bootstrap/Card';
+import { Folder2 } from 'react-bootstrap-icons';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+
+  var projects = [
+    { title: "v3", description: "The third iteration of my portfolio website", link: "https://github.com/dylanfox5/dylanfox-v3", id: 1 },
+    { title: "v2-react", description: "The second iteration of my porfolio website using ReactJS", link: "https://github.com/dylanfox5/v2-migration", id: 2 },
+    { title: "v2", description: "The second iteration of my portfolio website", link: "https://github.com/dylanfox5/dylanfox-v2", id: 3 },
+    { title: "v1", description: "The first iteration of my portfolio website", link: "https://github.com/dylanfox5/dylanfox-v1", id: 4 },
+    { title: "Graceland Today", description: "Conceptualized and built an online calendar for Graceland University", link: "https://github.com/dylanfox5/graceland-today", id: 5 },
+    { title: "Fox Pad", description: "An online music streaming service that allowed users to listen together in real-time", link: "https://github.com/dylanfox5/foxpad", id: 6 },
+  ];
+
   return (
     <div className="App">
       <MyNavbar />
@@ -49,7 +61,29 @@ function App() {
           </Col>
         </Row>
       </Container>
-      <Projects />
+      <Container id="projects" className="Projects">
+        <Row>
+          <h1 className="projects-title">projects</h1>
+        </Row>
+        <Row>
+          {projects.forEach((project) => {
+            <Col xs={12} md={6} lg={4} key={project.id}>
+              <Card>
+                <Card.Body>
+                  <a href={project.link}><Folder2 className="folder-icon"/></a>
+                  <Card.Text as="h5">
+                    {project.title}
+                  </Card.Text>
+                  <Card.Text>
+                    {project.description}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          })}
+        </Row>
+      </Container>
+      {/* <Projects /> */}
       <Contact />
       <Footer />
     </div>
