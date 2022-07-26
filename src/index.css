@@ -31,3 +31,17 @@ body {
 span {
   color: var(--green);
 }
+
+.About {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-title {
+  margin: auto;
+  font-weight: 500;
+  margin-bottom: 2vh;
+  color: var(--green);
+}
