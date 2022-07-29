@@ -20,6 +20,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/** Home **/
 .Home {
   min-height: 90vh;
   display: flex;
@@ -32,6 +33,7 @@ span {
   color: var(--green);
 }
 
+/** About **/
 .About {
   min-height: 100vh;
   display: flex;
@@ -46,7 +48,8 @@ span {
   color: var(--green);
 }
 
-.projects {
+/** Projects **/
+.Projects {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -84,7 +87,8 @@ span {
   }
 }
 
-.contact {
+/** Contact **/
+.Contact {
   min-height: 100vh;
   display: flex;
   flex-direction: column;

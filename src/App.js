@@ -83,7 +83,7 @@ function App() {
           })}
         </Row>
       </Container>
-      <Container id="contact" className='contact'>
+      <Container id="contact" className="Contact">
             <Row>
                 <Col sm={12} lg={8}>
                     <h3>
