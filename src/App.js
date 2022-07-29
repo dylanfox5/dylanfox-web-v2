@@ -1,5 +1,4 @@
 import MyNavbar from "./components/MyNavbar/MyNavbar";
-import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 
@@ -66,8 +65,8 @@ function App() {
           <h1 className="projects-title">projects</h1>
         </Row>
         <Row>
-          {projects.forEach((project) => {
-            <Col xs={12} md={6} lg={4} key={project.id}>
+          {projects.map((project) => {
+            return <Col xs={12} md={6} lg={4} key={project.id}>
               <Card>
                 <Card.Body>
                   <a href={project.link}><Folder2 className="folder-icon"/></a>
@@ -83,7 +82,6 @@ function App() {
           })}
         </Row>
       </Container>
-      {/* <Projects /> */}
       <Contact />
       <Footer />
     </div>
