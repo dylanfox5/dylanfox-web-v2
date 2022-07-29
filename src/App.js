@@ -19,7 +19,7 @@ function App() {
     { title: "v2", description: "The second iteration of my portfolio website", link: "https://github.com/dylanfox5/dylanfox-v2", id: 3 },
     { title: "v1", description: "The first iteration of my portfolio website", link: "https://github.com/dylanfox5/dylanfox-v1", id: 4 },
     { title: "Graceland Today", description: "Conceptualized and built an online calendar for Graceland University", link: "https://github.com/dylanfox5/graceland-today", id: 5 },
-    { title: "Fox Pad", description: "An online music streaming service that allowed users to listen together in real-time", link: "https://github.com/dylanfox5/foxpad", id: 6 },
+    { title: "Fox Pad", description: "An online music streaming service that allowed users to listen together in real-time", link: "https://github.com/dylanfox5/foxpad-web", id: 6 },
   ];
 
   return (
