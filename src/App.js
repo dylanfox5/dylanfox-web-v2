@@ -1,5 +1,4 @@
 import MyNavbar from "./components/MyNavbar/MyNavbar";
-import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 
 import Container from "react-bootstrap/Container";
@@ -7,6 +6,8 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Card from 'react-bootstrap/Card';
 import { Folder2 } from 'react-bootstrap-icons';
+import Button from 'react-bootstrap/Button';
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -69,7 +70,7 @@ function App() {
             return <Col xs={12} md={6} lg={4} key={project.id}>
               <Card>
                 <Card.Body>
-                  <a href={project.link}><Folder2 className="folder-icon"/></a>
+                  <a href={project.link}><Folder2 className="folder-icon" /></a>
                   <Card.Text as="h5">
                     {project.title}
                   </Card.Text>
@@ -82,7 +83,16 @@ function App() {
           })}
         </Row>
       </Container>
-      <Contact />
+      <Container id="contact" className='contact'>
+            <Row>
+                <Col sm={12} lg={8}>
+                    <h3>
+                        Interested in connecting? Shoot me a message.
+                    </h3>
+                    <Button href="mailto:dylan.fox.kc@gmail.com" className="contact-btn">contact-me</Button>{' '}
+                </Col>
+            </Row>
+        </Container>
       <Footer />
     </div>
   );
