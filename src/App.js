@@ -32,9 +32,28 @@ function App() {
     };
   
     return (
-      <Carousel activeIndex={index} onSelect={handleSelect} variant="dark" interval={null} indicators={false} className="Carousel">
-        <Carousel.Item>
+      <Carousel activeIndex={index} onSelect={handleSelect} variant="dark" interval={null} indicators={false} className="Carousel border">
+        <Carousel.Item className="mx-5">
           <h5>Analytics Developer <span>//</span> Evolytics</h5>
+          <p>
+            I started at Evolytics in August 2021 as an Analytics Developer. This position has accelerated my knowledge in front-end development, 
+            the development cycle, analytics implementations, and working with clients.
+          </p>
+          <p>
+            I'm part of teams responsible for the analytics implementation of three clients (Move Inc., Hagerty Insurance, The Kroger Company) that collect behavioral data for over 10M users per 
+            day altogether. We accomplish this by writing software for data collection and performing analysis. Tag Management Systems like Adobe Launch and Tealium iQ play a significant part in our development cycle, 
+            as well as analytics services such as Adobe Analytics and Google Analytics. This role also requires exceptional skill in technical writing in order to handoff documentation to our clients.
+          </p>
+          <p>
+            Here are some of the technologies we frequently use.
+          </p>
+          <ul>
+            <li>JavaScript, HTML, CSS</li>
+            <li>Node.js, ReactJS</li>
+            <li>Unit Testing Libraries (Mocha, Chai)</li>
+            <li>Adobe Launch, Tealium iQ</li>
+            <li>Adobe Analytics, Google Analytics</li>
+          </ul>
         </Carousel.Item>
         <Carousel.Item>
           <h5>Graduate Student <span>//</span> Graceland University</h5>
