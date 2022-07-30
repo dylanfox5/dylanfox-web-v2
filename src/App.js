@@ -6,6 +6,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Button from 'react-bootstrap/Button';
+import Carousel from 'react-bootstrap/Carousel';
+
+import { useState } from 'react';
 
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -20,6 +23,29 @@ function App() {
     { title: "Graceland Today", description: "Conceptualized and built an online calendar for Graceland University", link: "https://github.com/dylanfox5/graceland-today", id: 5 },
     { title: "Fox Pad", description: "An online music streaming service that allowed users to listen together in real-time", link: "https://github.com/dylanfox5/foxpad-web", id: 6 },
   ];
+
+  function ControlledCarousel() {
+    const [index, setIndex] = useState(0);
+  
+    const handleSelect = (selectedIndex, e) => {
+      setIndex(selectedIndex);
+    };
+  
+    return (
+      <Carousel activeIndex={index} onSelect={handleSelect} variant="dark" interval={null} indicators={false} className="Carousel">
+        <Carousel.Item>
+          <h5>Analytics Developer <span>//</span> Evolytics</h5>
+        </Carousel.Item>
+        <Carousel.Item>
+          <h5>Graduate Student <span>//</span> Graceland University</h5>
+        </Carousel.Item>
+        <Carousel.Item>
+          <h5>Undergraduate Student <span>//</span> Graceland University</h5>
+        </Carousel.Item>
+      </Carousel>
+    );
+  }
+  
 
   return (
     <div className="App">
@@ -60,24 +86,32 @@ function App() {
           </Col>
         </Row>
       </Container>
+      <Container className="Experience border">
+        <Row>
+          <Col sm={12} lg={12}>
+            <h1 className="experience-title">experience</h1>
+            <ControlledCarousel />
+          </Col>
+        </Row>
+      </Container>
       <Container id="projects" className="Projects">
         <Row>
           <h1 className="projects-title">projects</h1>
         </Row>
         <Row>
-          <CardGroup cards={projects}/>
+          <CardGroup cards={projects} />
         </Row>
       </Container>
       <Container id="contact" className="Contact">
-            <Row>
-                <Col sm={12} lg={8}>
-                    <h3>
-                        Interested in connecting? Shoot me a message.
-                    </h3>
-                    <Button href="mailto:dylan.fox.kc@gmail.com" className="contact-btn">contact-me</Button>{' '}
-                </Col>
-            </Row>
-        </Container>
+        <Row>
+          <Col sm={12} lg={8}>
+            <h3>
+              Interested in connecting? Shoot me a message.
+            </h3>
+            <Button href="mailto:dylan.fox.kc@gmail.com" className="contact-btn">contact-me</Button>{' '}
+          </Col>
+        </Row>
+      </Container>
       <Footer />
     </div>
   );
