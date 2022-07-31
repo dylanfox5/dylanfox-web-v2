@@ -32,8 +32,8 @@ function App() {
     };
   
     return (
-      <Carousel activeIndex={index} onSelect={handleSelect} variant="dark" interval={null} indicators={false} className="Carousel border">
-        <Carousel.Item className="mx-5">
+      <Carousel activeIndex={index} onSelect={handleSelect} variant="dark" interval={null} indicators={true} controls={false}>
+        <Carousel.Item>
           <h5>Analytics Developer <span>//</span> Evolytics</h5>
           <p>
             I started at Evolytics in August 2021 as an Analytics Developer. This position has accelerated my knowledge in front-end development, 
@@ -57,6 +57,14 @@ function App() {
         </Carousel.Item>
         <Carousel.Item>
           <h5>Graduate Student <span>//</span> Graceland University</h5>
+          <p>
+            I started my MSc in Data Science & Analytics degree at Graceland University in January 2022. Since then, I've completed courses in data science basics,
+            how to extract and clean data sets, machine learning, regression analysis, and working with big data.
+          </p>
+          <p>
+            Working through my MSc degree alongside working in analytics development has proven to be time-consuming but very beneficial. I have been able to apply
+            knowledge I've learned while working directly in my courses and vice versa.
+          </p>
         </Carousel.Item>
         <Carousel.Item>
           <h5>Undergraduate Student <span>//</span> Graceland University</h5>
@@ -105,7 +113,7 @@ function App() {
           </Col>
         </Row>
       </Container>
-      <Container className="Experience border">
+      <Container className="Experience">
         <Row>
           <Col sm={12} lg={12}>
             <h1 className="experience-title">experience</h1>

@@ -63,8 +63,19 @@ span {
   color: var(--green);
 }
 
-.Carousel {
+.carousel {
   color: black;
+}
+
+.carousel-item {
+  padding-right: 0vw;
+  min-height: 75vh;
+}
+
+@media (min-width: 992px) {
+  .carousel-item {
+      padding-right: 25vw;
+  }
 }
 
 /** Projects **/
