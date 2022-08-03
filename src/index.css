@@ -19,3 +19,120 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/** Home **/
+.Home {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+span {
+  color: var(--green);
+}
+
+/** About **/
+.About {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-title {
+  margin: auto;
+  font-weight: 500;
+  margin-bottom: 2vh;
+  color: var(--green);
+}
+
+/** Experience **/
+.Experience {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experience-title {
+  margin: auto;
+  font-weight: 500;
+  margin-bottom: 2vh;
+  color: var(--green);
+}
+
+.carousel {
+  color: black;
+}
+
+.carousel-item {
+  padding-right: 0vw;
+  min-height: 75vh;
+}
+
+@media (min-width: 992px) {
+  .carousel-item {
+      padding-right: 25vw;
+  }
+}
+
+/** Projects **/
+.Projects {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+}
+
+.projects-title {
+  color: var(--green);
+  margin: auto;
+  font-weight: 500;
+  margin-bottom: 2vh;
+}
+
+.card {
+  width: auto;
+  transition: ease-in .15s;
+  margin-bottom: 2vh;
+  color: black;
+}
+
+.folder-icon {
+  font-size: 200%;
+  margin-bottom: 2vh;
+  color: black;
+}
+
+.folder-icon:hover {
+  color: var(--green);
+}
+
+@media (min-width: 768px) {
+  .card {
+      min-height: 25vh;
+  }
+}
+
+/** Contact **/
+.Contact {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-title {
+  margin: auto;
+  font-weight: 500;
+  margin-bottom: 2vh;
+  color: var(--green);
+}
+
+.contact-btn {
+  margin-top: 1vh;
+  background-color: var(--green) !important;
+}
