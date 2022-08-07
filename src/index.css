@@ -69,7 +69,7 @@ span {
 }
 
 .carousel-item {
-  min-height: 60vh;
+  min-height: 65vh;
 }
 
 @media (min-width: 992px) {
