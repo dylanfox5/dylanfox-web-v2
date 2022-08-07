@@ -137,3 +137,7 @@ span {
   margin-top: 1vh;
   background-color: var(--green) !important;
 }
+
+.hide {
+  visibility: hidden;
+}

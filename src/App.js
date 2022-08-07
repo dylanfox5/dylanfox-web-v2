@@ -9,25 +9,37 @@ import Col from "react-bootstrap/Col"
 import Button from 'react-bootstrap/Button';
 
 import { useEffect } from 'react';
-import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-  const variant = {
-    visible: { x: 0, transition: { ease: "easeInOut", duration: 0.75 } },
-    hidden: { x: -500 }
-  };
+  
+  const [aboutRef, aboutInView] = useInView();
+  const [expRef, expInView] = useInView();
+  const [projRef, projInView] = useInView();
+  const [conRef, conInView] = useInView();
+  
 
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
+    if (aboutInView) {
+      let el = document.getElementById("about");
+      el.classList.remove("hide");
+      el.classList.add("animate__animated", "animate__fadeInLeft");
+    } else if (expInView) {
+      let el = document.getElementById("experience");
+      el.classList.remove("hide");
+      el.classList.add("animate__animated", "animate__fadeInLeft");
+    } else if (projInView) {
+      let el = document.getElementById("projects");
+      el.classList.remove("hide");
+      el.classList.add("animate__animated", "animated__fadeIn", "animate__delay-1s");
+    } else if (conInView) {
+      let el = document.getElementById("contact");
+      el.classList.remove("hide");
+      el.classList.add("animate__animated", "animate__fadeInLeft");
     }
-  }, [controls, inView]);
+  }, [aboutInView, expInView, projInView, conInView]);
 
   var projects = [
     { title: "v3", description: "The third iteration of my portfolio website", link: "https://github.com/dylanfox5/dylanfox-v3", id: 1 },
@@ -43,19 +55,14 @@ function App() {
       <MyNavbar />
       <Container className="Home" id="home">
         <Row>
-          <Col sm={12} lg={8} className="animate__animated animate__fadeInLeft animate__delay-1s">
+          <Col sm={12} lg={8} className="animate__animated animate__fadeInLeft">
             <h3>Hi, I'm <span>Dylan</span> -- an analytics focused software developer who enjoys innovating solutions for complex problems.</h3>
           </Col>
         </Row>
       </Container>
-      <Container id="about" className="About">
+      <Container id="about" className="About hide">
         <Row>
-          <Col sm={12} lg={8}>
-            <motion.div
-            ref={ref}
-            animate={controls}
-            initial="hidden"
-            variants={variant}>
+          <Col sm={12} lg={8} ref={aboutRef}>
               <h1 className="about-title">about-me</h1>
               <h5>
                 Leadership <span>//</span> Innovation <span>//</span> Problem-Solving
@@ -79,19 +86,18 @@ function App() {
                 This is the ideology I live each day by. Be sure to continue on or follow me on any social media
                 to see what that looks like. 🚀
               </p>
-            </motion.div>
           </Col>
         </Row>
       </Container>
-      <Container className="Experience">
+      <Container id="experience" className="Experience hide">
         <Row>
-          <Col sm={12} lg={12}>
+          <Col sm={12} lg={12} ref={expRef}>
             <h1 className="experience-title">experience</h1>
             <ControlledCarousel />
           </Col>
         </Row>
       </Container>
-      <Container id="projects" className="Projects">
+      <Container id="projects" className="Projects hide" ref={projRef}>
         <Row>
           <h1 className="projects-title">projects</h1>
         </Row>
@@ -99,9 +105,9 @@ function App() {
           <CardGroup cards={projects} />
         </Row>
       </Container>
-      <Container id="contact" className="Contact">
+      <Container id="contact" className="Contact hide">
         <Row>
-          <Col sm={12} lg={8}>
+          <Col sm={12} lg={8} ref={conRef}>
             <h3>
               Interested in connecting? Shoot me a message.
             </h3>
