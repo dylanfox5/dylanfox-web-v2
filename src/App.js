@@ -8,10 +8,41 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Button from 'react-bootstrap/Button';
 
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+
+  const [aboutRef, aboutInView] = useInView();
+  const [expRef, expInView] = useInView();
+  const [projRef, projInView] = useInView();
+  const [conRef, conInView] = useInView();
+
+
+  useEffect(() => {
+    if (aboutInView) {
+      let el = document.getElementById("about");
+      el.classList.remove("hide");
+      el.classList.add("animate__animated", "animate__fadeInLeft");
+    } else if (expInView) {
+      let el = document.getElementById("experience");
+      el.classList.remove("hide");
+      el.classList.add("animate__animated", "animate__fadeInLeft");
+    } else if (projInView) {
+      let el = document.getElementById("projects");
+      let el1 = document.getElementById("projects-title");
+      let el2 = document.getElementById("projects-cards");
+      el.classList.remove("hide");
+      el1.classList.add("animate__animated", "animate__fadeInLeft");
+      el2.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+    } else if (conInView) {
+      let el = document.getElementById("contact");
+      el.classList.remove("hide");
+      el.classList.add("animate__animated", "animate__fadeInLeft");
+    }
+  }, [aboutInView, expInView, projInView, conInView]);
 
   var projects = [
     { title: "v3", description: "The third iteration of my portfolio website", link: "https://github.com/dylanfox5/dylanfox-v3", id: 1 },
@@ -27,20 +58,20 @@ function App() {
       <MyNavbar />
       <Container className="Home" id="home">
         <Row>
-          <Col sm={12} lg={8} className="animate__animated animate__fadeInLeft animate__delay-1s">
-            <h3>Hi, I"m <span>Dylan</span> -- an analytics focused software developer who enjoys innovating solutions for complex problems.</h3>
+          <Col sm={12} lg={8} className="animate__animated animate__fadeInLeft">
+            <h3>Hi, I'm <span>Dylan</span> -- an analytics focused software developer who enjoys innovating solutions for complex problems.</h3>
           </Col>
         </Row>
       </Container>
-      <Container id="about" className="About">
+      <Container id="about" className="About hide">
         <Row>
-          <Col sm={12} lg={8} >
+          <Col sm={12} lg={8} ref={aboutRef}>
             <h1 className="about-title">about-me</h1>
             <h5>
               Leadership <span>//</span> Innovation <span>//</span> Problem-Solving
             </h5>
             <p>
-              I"m a strong advocate for serving others; choosing to have
+              I'm a strong advocate for serving others; choosing to have
               the humility to put others first and care for others. A good leader must first be a good follower.
               These are the foundations of <span>leadership</span>.
             </p>
@@ -61,25 +92,25 @@ function App() {
           </Col>
         </Row>
       </Container>
-      <Container className="Experience">
+      <Container id="experience" className="Experience hide">
         <Row>
-          <Col sm={12} lg={12}>
+          <Col sm={12} lg={12} ref={expRef}>
             <h1 className="experience-title">experience</h1>
             <ControlledCarousel />
           </Col>
         </Row>
       </Container>
-      <Container id="projects" className="Projects">
+      <Container id="projects" className="Projects hide" ref={projRef}>
         <Row>
-          <h1 className="projects-title">projects</h1>
+          <h1 id="projects-title" className="projects-title">projects</h1>
         </Row>
-        <Row>
+        <Row id="projects-cards">
           <CardGroup cards={projects} />
         </Row>
       </Container>
-      <Container id="contact" className="Contact">
+      <Container id="contact" className="Contact hide">
         <Row>
-          <Col sm={12} lg={8}>
+          <Col sm={12} lg={8} ref={conRef}>
             <h3>
               Interested in connecting? Shoot me a message.
             </h3>
