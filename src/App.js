@@ -32,8 +32,11 @@ function App() {
       el.classList.add("animate__animated", "animate__fadeInLeft");
     } else if (projInView) {
       let el = document.getElementById("projects");
+      let el1 = document.getElementById("projects-title");
+      let el2 = document.getElementById("projects-cards");
       el.classList.remove("hide");
-      el.classList.add("animate__animated", "animated__fadeIn", "animate__delay-1s");
+      el1.classList.add("animate__animated", "animate__fadeInLeft");
+      el2.classList.add("animate__animated", "animate__bounceIn", "animate__delay-1s");
     } else if (conInView) {
       let el = document.getElementById("contact");
       el.classList.remove("hide");
@@ -99,9 +102,9 @@ function App() {
       </Container>
       <Container id="projects" className="Projects hide" ref={projRef}>
         <Row>
-          <h1 className="projects-title">projects</h1>
+          <h1 id="projects-title" className="projects-title">projects</h1>
         </Row>
-        <Row>
+        <Row id="projects-cards">
           <CardGroup cards={projects} />
         </Row>
       </Container>
