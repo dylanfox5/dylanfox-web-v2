@@ -1,10 +1,12 @@
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import './MyNavbar.css';
 
 import { debounce } from '../../utilities/utils';
 import { useState, useEffect } from 'react';
+import { Linkedin, Instagram, Github } from 'react-bootstrap-icons';
 
 function MyNavbar() {
 
@@ -33,6 +35,11 @@ function MyNavbar() {
             <Nav.Link className="nav-item" href="#about">about</Nav.Link>
             <Nav.Link className="nav-item" href="#projects">projects</Nav.Link>
             <Nav.Link className="nav-item" href="#contact">contact</Nav.Link>
+            <NavDropdown title="social" id="basic-nav-dropdown">
+              <NavDropdown.Item target="_blank" href="https://www.linkedin.com/in/dylanffox/"><Linkedin /></NavDropdown.Item>
+              <NavDropdown.Item target="_blank" href="https://www.instagram.com/dfox_5/"><Instagram /></NavDropdown.Item>
+              <NavDropdown.Item target="_blank" href="https://github.com/dylanfox5"><Github /></NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -8,3 +8,7 @@
 .nav-item:hover {
     color: var(--green) !important;
 }
+
+#basic-nav-dropdown:hover {
+    color: var(--green) !important;
+}
