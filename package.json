@@ -1,9 +1,8 @@
 {
   "name": "dylanfox-v3",
-  "homepage": "https://www.dylanfox.net",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dylanfox.net/minimal-portfolio"
+  "homepage": "https://dylanfox.net/minimal-portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
